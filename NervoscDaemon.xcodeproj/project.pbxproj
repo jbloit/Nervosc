@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D1718E51C7FA42100C1E2E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1718E41C7FA42100C1E2E2 /* AppDelegate.m */; };
+		6D1718E81C7FA42100C1E2E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1718E71C7FA42100C1E2E2 /* main.m */; };
+		6D1718EA1C7FA42100C1E2E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D1718E91C7FA42100C1E2E2 /* Assets.xcassets */; };
+		6D1718F61C8027DE00C1E2E2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1718F51C8027DE00C1E2E2 /* MainMenu.xib */; };
+		6D1718FA1C8027F300C1E2E2 /* PTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1718F91C8027F300C1E2E2 /* PTAppDelegate.m */; };
+		DF6B828F2C48E625A459B9B2 /* libPods-NervoscDaemon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0335DA4C21AB0CBD59BE2E89 /* libPods-NervoscDaemon.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0335DA4C21AB0CBD59BE2E89 /* libPods-NervoscDaemon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NervoscDaemon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D1718E01C7FA42100C1E2E2 /* NervoscDaemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NervoscDaemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D1718E31C7FA42100C1E2E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D1718E41C7FA42100C1E2E2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6D1718E71C7FA42100C1E2E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D1718E91C7FA42100C1E2E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D1718EE1C7FA42100C1E2E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D1718F51C8027DE00C1E2E2 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		6D1718F71C8027F300C1E2E2 /* PTExampleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTExampleProtocol.h; sourceTree = "<group>"; };
+		6D1718F81C8027F300C1E2E2 /* PTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAppDelegate.h; sourceTree = "<group>"; };
+		6D1718F91C8027F300C1E2E2 /* PTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAppDelegate.m; sourceTree = "<group>"; };
+		6D1718FB1C80283700C1E2E2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CCE80761E283A9DB848DB964 /* Pods-NervoscDaemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NervoscDaemon.release.xcconfig"; path = "Pods/Target Support Files/Pods-NervoscDaemon/Pods-NervoscDaemon.release.xcconfig"; sourceTree = "<group>"; };
+		DCBFC46DA2B9A3567D1EFA8B /* Pods-NervoscDaemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NervoscDaemon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NervoscDaemon/Pods-NervoscDaemon.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D1718DD1C7FA42100C1E2E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF6B828F2C48E625A459B9B2 /* libPods-NervoscDaemon.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10BAAECCF6BCE798F719CD41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0335DA4C21AB0CBD59BE2E89 /* libPods-NervoscDaemon.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D1718D71C7FA42100C1E2E2 = {
+			isa = PBXGroup;
+			children = (
+				6D1718E21C7FA42100C1E2E2 /* NervoscDaemon */,
+				6D1718E11C7FA42100C1E2E2 /* Products */,
+				AC7FD211A89B0C4817645221 /* Pods */,
+				10BAAECCF6BCE798F719CD41 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6D1718E11C7FA42100C1E2E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D1718E01C7FA42100C1E2E2 /* NervoscDaemon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D1718E21C7FA42100C1E2E2 /* NervoscDaemon */ = {
+			isa = PBXGroup;
+			children = (
+				6D1718F71C8027F300C1E2E2 /* PTExampleProtocol.h */,
+				6D1718F81C8027F300C1E2E2 /* PTAppDelegate.h */,
+				6D1718F91C8027F300C1E2E2 /* PTAppDelegate.m */,
+				6D1718E31C7FA42100C1E2E2 /* AppDelegate.h */,
+				6D1718E41C7FA42100C1E2E2 /* AppDelegate.m */,
+				6D1718F51C8027DE00C1E2E2 /* MainMenu.xib */,
+				6D1718E91C7FA42100C1E2E2 /* Assets.xcassets */,
+				6D1718EE1C7FA42100C1E2E2 /* Info.plist */,
+				6D1718E61C7FA42100C1E2E2 /* Supporting Files */,
+			);
+			path = NervoscDaemon;
+			sourceTree = "<group>";
+		};
+		6D1718E61C7FA42100C1E2E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D1718E71C7FA42100C1E2E2 /* main.m */,
+				6D1718FB1C80283700C1E2E2 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC7FD211A89B0C4817645221 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCBFC46DA2B9A3567D1EFA8B /* Pods-NervoscDaemon.debug.xcconfig */,
+				CCE80761E283A9DB848DB964 /* Pods-NervoscDaemon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D1718DF1C7FA42100C1E2E2 /* NervoscDaemon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D1718F11C7FA42100C1E2E2 /* Build configuration list for PBXNativeTarget "NervoscDaemon" */;
+			buildPhases = (
+				E5C236947F8A9BDF31B23C74 /* Check Pods Manifest.lock */,
+				6D1718DC1C7FA42100C1E2E2 /* Sources */,
+				6D1718DD1C7FA42100C1E2E2 /* Frameworks */,
+				6D1718DE1C7FA42100C1E2E2 /* Resources */,
+				5B4D29ED87E0E4E9D49D3C4C /* Embed Pods Frameworks */,
+				9A2DD7543E027D6BCCCC87BB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NervoscDaemon;
+			productName = NervoscDaemon;
+			productReference = 6D1718E01C7FA42100C1E2E2 /* NervoscDaemon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D1718D81C7FA42100C1E2E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = jbloit;
+				TargetAttributes = {
+					6D1718DF1C7FA42100C1E2E2 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 6D1718DB1C7FA42100C1E2E2 /* Build configuration list for PBXProject "NervoscDaemon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D1718D71C7FA42100C1E2E2;
+			productRefGroup = 6D1718E11C7FA42100C1E2E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D1718DF1C7FA42100C1E2E2 /* NervoscDaemon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D1718DE1C7FA42100C1E2E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D1718EA1C7FA42100C1E2E2 /* Assets.xcassets in Resources */,
+				6D1718F61C8027DE00C1E2E2 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B4D29ED87E0E4E9D49D3C4C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NervoscDaemon/Pods-NervoscDaemon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A2DD7543E027D6BCCCC87BB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NervoscDaemon/Pods-NervoscDaemon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5C236947F8A9BDF31B23C74 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D1718DC1C7FA42100C1E2E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D1718E81C7FA42100C1E2E2 /* main.m in Sources */,
+				6D1718FA1C8027F300C1E2E2 /* PTAppDelegate.m in Sources */,
+				6D1718E51C7FA42100C1E2E2 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6D1718EF1C7FA42100C1E2E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6D1718F01C7FA42100C1E2E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6D1718F21C7FA42100C1E2E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCBFC46DA2B9A3567D1EFA8B /* Pods-NervoscDaemon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = NervoscDaemon/PrefixHeader.pch;
+				INFOPLIST_FILE = NervoscDaemon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbloit.NervoscDaemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6D1718F31C7FA42100C1E2E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE80761E283A9DB848DB964 /* Pods-NervoscDaemon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = NervoscDaemon/PrefixHeader.pch;
+				INFOPLIST_FILE = NervoscDaemon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbloit.NervoscDaemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D1718DB1C7FA42100C1E2E2 /* Build configuration list for PBXProject "NervoscDaemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D1718EF1C7FA42100C1E2E2 /* Debug */,
+				6D1718F01C7FA42100C1E2E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D1718F11C7FA42100C1E2E2 /* Build configuration list for PBXNativeTarget "NervoscDaemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D1718F21C7FA42100C1E2E2 /* Debug */,
+				6D1718F31C7FA42100C1E2E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D1718D81C7FA42100C1E2E2 /* Project object */;
+}
