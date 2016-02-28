@@ -2,7 +2,7 @@
 #import "PTUSBHub.h"
 #import "PTExampleProtocol.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import <OSCKit/OSCKit.h>
 
 const int OSC_PORT = 54321;
 const int OSC_PORT_OUT = 12345;
@@ -24,6 +24,7 @@ const int OSC_PORT_OUT = 12345;
 
 @property (readonly) NSNumber *connectedDeviceID;
 @property PTChannel *connectedChannel;
+@property (strong, nonatomic) OSCClient *client;
 
 - (void)presentMessage:(NSString*)message isStatus:(BOOL)isStatus;
 - (void)startListeningForDevices;
@@ -79,6 +80,8 @@ const int OSC_PORT_OUT = 12345;
   // Start pinging
   [self ping];
     
+   // OSC
+   _client = [[OSCClient alloc] init];
     
 }
 
@@ -100,6 +103,11 @@ const int OSC_PORT_OUT = 12345;
 
 
 - (void)presentMessage:(NSString*)message isStatus:(BOOL)isStatus {
+    
+    
+  OSCMessage * oscMessage = [OSCMessage to:@"/hello" with:@[@1, @"cool", @0.5f]];
+  [_client sendMessage:oscMessage to:@"udp://localhost:8000"];
+    
   NSLog(@">> %@", message);
   [self.outputTextView.textStorage beginEditing];
   if (self.outputTextView.textStorage.length > 0) {
@@ -107,21 +115,21 @@ const int OSC_PORT_OUT = 12345;
   }
   [self.outputTextView.textStorage appendAttributedString:[[NSAttributedString alloc] initWithString:message attributes:isStatus ? consoleStatusTextAttributes_ : consoleTextAttributes_]];
   [self.outputTextView.textStorage endEditing];
-  
-  [NSAnimationContext beginGrouping];
-  [NSAnimationContext currentContext].duration = 0.15;
-  [NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-  NSClipView* clipView = [[self.outputTextView enclosingScrollView] contentView];
-  NSPoint newOrigin = clipView.bounds.origin;
-  newOrigin.y += 5.0; // hack A 1/2
-  [clipView setBoundsOrigin:newOrigin]; // hack A 2/2
-  newOrigin.y += 1000.0;
-  newOrigin = [clipView constrainScrollPoint:newOrigin];
-  [clipView.animator setBoundsOrigin:newOrigin];
-  [NSAnimationContext endGrouping];
+//
+//  [NSAnimationContext beginGrouping];
+//  [NSAnimationContext currentContext].duration = 0.15;
+//  [NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//  NSClipView* clipView = [[self.outputTextView enclosingScrollView] contentView];
+//  NSPoint newOrigin = clipView.bounds.origin;
+//  newOrigin.y += 5.0; // hack A 1/2
+//  [clipView setBoundsOrigin:newOrigin]; // hack A 2/2
+//  newOrigin.y += 1000.0;
+//  newOrigin = [clipView constrainScrollPoint:newOrigin];
+//  [clipView.animator setBoundsOrigin:newOrigin];
+//  [NSAnimationContext endGrouping];
   
   // Scrolling w/o animation:
-  //[self.outputTextView scrollToEndOfDocument:self];
+  [self.outputTextView scrollToEndOfDocument:self];
 }
 
 
