@@ -102,11 +102,19 @@ const int OSC_PORT_OUT = 12345;
 }
 
 
+- (void)sendOscMessage:(NSString*)messageAsString {
+
+    NSArray *parts = [messageAsString componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if ([parts count] > 1){
+        float value = [[parts objectAtIndex:1] floatValue];
+        OSCMessage * oscMessage = [OSCMessage to: [parts objectAtIndex:0] with:@[@(value)]];
+        [_client sendMessage:oscMessage to:@"udp://localhost:8000"];
+    }
+}
+
 - (void)presentMessage:(NSString*)message isStatus:(BOOL)isStatus {
     
-    
-  OSCMessage * oscMessage = [OSCMessage to:@"/hello" with:@[@1, @"cool", @0.5f]];
-  [_client sendMessage:oscMessage to:@"udp://localhost:8000"];
+
     
   NSLog(@">> %@", message);
   [self.outputTextView.textStorage beginEditing];
@@ -115,18 +123,18 @@ const int OSC_PORT_OUT = 12345;
   }
   [self.outputTextView.textStorage appendAttributedString:[[NSAttributedString alloc] initWithString:message attributes:isStatus ? consoleStatusTextAttributes_ : consoleTextAttributes_]];
   [self.outputTextView.textStorage endEditing];
-//
-//  [NSAnimationContext beginGrouping];
-//  [NSAnimationContext currentContext].duration = 0.15;
-//  [NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//  NSClipView* clipView = [[self.outputTextView enclosingScrollView] contentView];
-//  NSPoint newOrigin = clipView.bounds.origin;
-//  newOrigin.y += 5.0; // hack A 1/2
-//  [clipView setBoundsOrigin:newOrigin]; // hack A 2/2
-//  newOrigin.y += 1000.0;
-//  newOrigin = [clipView constrainScrollPoint:newOrigin];
-//  [clipView.animator setBoundsOrigin:newOrigin];
-//  [NSAnimationContext endGrouping];
+
+  [NSAnimationContext beginGrouping];
+  [NSAnimationContext currentContext].duration = 0.15;
+  [NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+  NSClipView* clipView = [[self.outputTextView enclosingScrollView] contentView];
+  NSPoint newOrigin = clipView.bounds.origin;
+  newOrigin.y += 5.0; // hack A 1/2
+  [clipView setBoundsOrigin:newOrigin]; // hack A 2/2
+  newOrigin.y += 1000.0;
+  newOrigin = [clipView constrainScrollPoint:newOrigin];
+  [clipView.animator setBoundsOrigin:newOrigin];
+  [NSAnimationContext endGrouping];
   
   // Scrolling w/o animation:
   [self.outputTextView scrollToEndOfDocument:self];
@@ -222,7 +230,7 @@ const int OSC_PORT_OUT = 12345;
     textFrame->length = ntohl(textFrame->length);
     NSString *message = [[NSString alloc] initWithBytes:textFrame->utf8text length:textFrame->length encoding:NSUTF8StringEncoding];
       
-//    [self sendOSC:[NSString stringWithFormat:@"[%@]: %@", channel.userInfo, message] isStatus:NO];
+    [self sendOscMessage:message];
     [self presentMessage:[NSString stringWithFormat:@"[%@]: %@", channel.userInfo, message] isStatus:NO];
   } else if (type == PTExampleFrameTypePong) {
     [self pongWithTag:tag error:nil];

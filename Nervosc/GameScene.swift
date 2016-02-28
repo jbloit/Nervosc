@@ -37,11 +37,10 @@ class GameScene: SKScene {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
-        
+
+        nerve?.sendMessage("-------- TOUCHED NERVE ---------")
         for touch in touches {
-            
-            nerve?.sendMessage("-------- TOUCHED NERVE ---------")
-            
+
             let location = touch.locationInNode(self)
             
             let star = SKSpriteNode(imageNamed:"star")
@@ -52,16 +51,25 @@ class GameScene: SKScene {
             star.runAction(SKAction.repeatActionForever(action))
             star.physicsBody = SKPhysicsBody(circleOfRadius: star.size.height / 15.0)
             star.physicsBody?.dynamic = true
+            star.name = "star"
             self.addChild(star)
             
             let joint = SKPhysicsJointSpring.jointWithBodyA(centerStar.physicsBody!, bodyB: star.physicsBody!, anchorA: centerStar.position, anchorB: star.position)
             physicsWorld.addJoint(joint)
             
+
             
         }
     }
    
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+    override func didEvaluateActions() {
+        self.enumerateChildNodesWithName("star") {
+            node, stop in
+            // do something with node or stop
+            self.nerve.sendMessage("/star/position/x \(node.position.x )")
+        }
+
+        
     }
+    
 }
