@@ -11,6 +11,7 @@
 		6D1718EA1C7FA42100C1E2E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D1718E91C7FA42100C1E2E2 /* Assets.xcassets */; };
 		6D1718F61C8027DE00C1E2E2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1718F51C8027DE00C1E2E2 /* MainMenu.xib */; };
 		6D1718FA1C8027F300C1E2E2 /* PTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1718F91C8027F300C1E2E2 /* PTAppDelegate.m */; };
+		6D2479681C84376400FBC6FE /* RingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2479671C84376400FBC6FE /* RingScene.swift */; };
 		6DFE581D1C80CD9500005D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE581C1C80CD9500005D35 /* AppDelegate.swift */; };
 		6DFE581F1C80CD9500005D35 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6DFE581E1C80CD9500005D35 /* GameScene.sks */; };
 		6DFE58211C80CD9500005D35 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE58201C80CD9500005D35 /* GameScene.swift */; };
@@ -35,6 +36,7 @@
 		6D1718F81C8027F300C1E2E2 /* PTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAppDelegate.h; sourceTree = "<group>"; };
 		6D1718F91C8027F300C1E2E2 /* PTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAppDelegate.m; sourceTree = "<group>"; };
 		6D1718FB1C80283700C1E2E2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6D2479671C84376400FBC6FE /* RingScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingScene.swift; sourceTree = "<group>"; };
 		6D9E67FA1C81BEBE00867764 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6DFE581A1C80CD9500005D35 /* Nervosc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nervosc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFE581C1C80CD9500005D35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				6DFE581C1C80CD9500005D35 /* AppDelegate.swift */,
 				6DFE581E1C80CD9500005D35 /* GameScene.sks */,
 				6DFE58201C80CD9500005D35 /* GameScene.swift */,
+				6D2479671C84376400FBC6FE /* RingScene.swift */,
 				6DFE58221C80CD9500005D35 /* GameViewController.swift */,
 				6DFE58241C80CD9500005D35 /* Main.storyboard */,
 				6DFE58271C80CD9500005D35 /* Assets.xcassets */,
@@ -366,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D2479681C84376400FBC6FE /* RingScene.swift in Sources */,
 				6DFE58211C80CD9500005D35 /* GameScene.swift in Sources */,
 				6DFE58231C80CD9500005D35 /* GameViewController.swift in Sources */,
 				6DFE58321C80CE2800005D35 /* Nerve.m in Sources */,
