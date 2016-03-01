@@ -13,7 +13,9 @@ class RingScene: SKScene {
     let nerve = Nerve.sharedInstance()
     let starIcon = SKSpriteNode(imageNamed:"star")
     let ringCenter = SKSpriteNode(imageNamed: "ringIcon")
-    let box = SKSpriteNode()
+    let box = SKShapeNode()
+    let boxPath: CGMutablePath = CGPathCreateMutable()
+    
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -32,12 +34,18 @@ class RingScene: SKScene {
         self.addChild(ringCenter)
         
         
-        // BOX
-        box.physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRectMake(
-            scene!.size.width * 0.5,
-            scene!.size.height * 0.5,
-            scene!.size.width * 0.5,
-            scene!.size.height * 0.5))
+        // CIRCLE BOX
+        
+        CGPathAddArc(boxPath, nil, 0, 0, 300, 0, CGFloat(M_PI * 2.0), true)
+        box.path = boxPath
+        box.lineWidth = 10
+        box.fillColor = SKColor.whiteColor()
+        box.alpha = 0.2
+        box.strokeColor = SKColor.blueColor()
+        box.glowWidth = 2
+        
+        box.position = CGPoint(x:(self.view?.frame.midX)!, y: (self.view?.frame.midY)! )
+        box.physicsBody = SKPhysicsBody(edgeLoopFromPath: boxPath)
         box.physicsBody?.dynamic = false
         self.addChild(box)
         
