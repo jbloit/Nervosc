@@ -27,7 +27,7 @@ class GameViewController: UIViewController {
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
+            scene.scaleMode = .aspectFill
             
             skView.presentScene(scene)
             
@@ -38,18 +38,18 @@ class GameViewController: UIViewController {
             inspector = RingInspector(frame: CGRectMake(0, 0, 200, self.view.frame.size.height))
             self.view.addSubview(inspector)
             
-            inspector.addObserver(self, forKeyPath: "frequencyValue", options: .New, context: nil)
-            inspector.addObserver(self, forKeyPath: "dampValue", options: .New, context: nil)
-            inspector.addObserver(self, forKeyPath: "ballMass", options: .New, context: nil)
-            inspector.addObserver(self, forKeyPath: "ballDensity", options: .New, context: nil)
-            inspector.addObserver(self, forKeyPath: "ballFriction", options: .New, context: nil)
-            inspector.addObserver(self, forKeyPath: "ballRestitution", options: .New, context: nil)
+            inspector.addObserver(self, forKeyPath: "frequencyValue", options: .new, context: nil)
+            inspector.addObserver(self, forKeyPath: "dampValue", options: .new, context: nil)
+            inspector.addObserver(self, forKeyPath: "ballMass", options: .new, context: nil)
+            inspector.addObserver(self, forKeyPath: "ballDensity", options: .new, context: nil)
+            inspector.addObserver(self, forKeyPath: "ballFriction", options: .new, context: nil)
+            inspector.addObserver(self, forKeyPath: "ballRestitution", options: .new, context: nil)
             
         }
     }
-
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        if let newValue = change?[NSKeyValueChangeNewKey] {
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if let newValue = change?[NSKeyValueChangeKey.newKey] {
 
             
             if (keyPath! == "frequencyValue"){
@@ -87,29 +87,29 @@ class GameViewController: UIViewController {
     }
     
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         inspector?.removeObserver(self, forKeyPath: "frequencyValue", context: nil)
         inspector?.removeObserver(self, forKeyPath: "dampValue", context: nil)
     }
     
-    override func shouldAutorotate() -> Bool {
+    override var shouldAutorotate: Bool {
         return true
     }
 
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
-        } else {
-            return .All
+    
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return UIInterfaceOrientationMask.landscape
         }
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden: Bool {
         return true
     }
 }

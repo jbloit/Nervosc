@@ -14,7 +14,7 @@ class RingScene: SKScene {
     let starIcon = SKSpriteNode(imageNamed:"star")
     let ringCenter = SKSpriteNode(imageNamed: "ringIcon")
     let box = SKShapeNode()
-    let boxPath: CGMutablePath = CGPathCreateMutable()
+    let boxPath: CGMutablePath = CGMutablePath()
     var ball: SKSpriteNode!
 
     weak var viewController: GameViewController!
@@ -70,10 +70,10 @@ class RingScene: SKScene {
         }
     }
 
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         /* Setup your scene here */
         
-        self.backgroundColor = SKColor.blackColor()
+        self.backgroundColor = SKColor.black
         physicsWorld.gravity = CGVectorMake(0, 0)
         
         // BALL
@@ -85,7 +85,7 @@ class RingScene: SKScene {
         ringCenter.yScale = 0.2
         ringCenter.position = CGPoint(x:(self.view?.frame.midX)!, y: (self.view?.frame.midY)!)
         ringCenter.physicsBody = SKPhysicsBody(circleOfRadius: 1)
-        ringCenter.physicsBody?.dynamic = false
+        ringCenter.physicsBody?.isDynamic = false
         ringCenter.physicsBody?.restitution = 0
         ringCenter.physicsBody?.density = 10000
         ringCenter.name = "ringCenter"
@@ -93,39 +93,39 @@ class RingScene: SKScene {
         
         
         // CIRCLE BOX
-        CGPathAddArc(boxPath, nil, 0, 0, 300, 0, CGFloat(M_PI * 2.0), true)
+
+        boxPath.addArc(center: CGPoint(x: 0,y: 0), radius: 300, startAngle: 0, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+    
         box.path = boxPath
         box.lineWidth = 10
-        box.fillColor = SKColor.whiteColor()
+        box.fillColor = SKColor.white
         box.alpha = 0.2
-        box.strokeColor = SKColor.blueColor()
+        box.strokeColor = SKColor.blue
         box.glowWidth = 2
         box.position = CGPoint(x:(self.view?.frame.midX)!, y: (self.view?.frame.midY)! )
-        box.physicsBody = SKPhysicsBody(edgeLoopFromPath: boxPath)
-        box.physicsBody?.dynamic = false
+        box.physicsBody = SKPhysicsBody(edgeLoopFrom: boxPath)
+        box.physicsBody?.isDynamic = false
         self.addChild(box)
         
         // BALL
         ball.position = CGPoint(x:(self.view?.frame.midX)!, y: (self.view?.frame.midY)!)
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.height/2)
-        ball.physicsBody?.dynamic = true
+        ball.physicsBody?.isDynamic = true
         ball.physicsBody?.density = 0.001
         ball.name = "ball"
         
 
-
-
         self.addChild(ball)
         
         
-        centerJoint = SKPhysicsJointSpring.jointWithBodyA(
-            ringCenter.physicsBody!,
+        centerJoint = SKPhysicsJointSpring.joint(
+            withBodyA: ringCenter.physicsBody!,
             bodyB: ball.physicsBody!,
             anchorA: ringCenter.position,
             anchorB: ball.position)
         centerJoint.frequency = 1
         centerJoint.damping = 0.1
-        physicsWorld.addJoint(centerJoint)
+        physicsWorld.add(centerJoint)
         
 
     }
@@ -140,14 +140,14 @@ class RingScene: SKScene {
         print(centerJoint?.frequency)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         
         for touch in touches {
             
-            let location = touch.locationInNode(self)
+            let location = touch.location(in: self)
             
-            if let touchedNode = self.nodeAtPoint(location) as SKNode!{
+            if (self.atPoint(location) as SKNode) != nil {
                 
 
                 let pointer = SKSpriteNode(imageNamed:"pointer")
@@ -158,18 +158,18 @@ class RingScene: SKScene {
                 // (there is no actual length property for the spring joint);
                 pointer.position = ball.position
                 pointer.physicsBody = SKPhysicsBody(circleOfRadius: pointer.size.height/2)
-                pointer.physicsBody?.dynamic = false
+                pointer.physicsBody?.isDynamic = false
                 pointer.name = "pointer"
                 self.addChild(pointer)
                 
-                let joint = SKPhysicsJointSpring.jointWithBodyA(
-                    ball.physicsBody!,
+                let joint = SKPhysicsJointSpring.joint(
+                    withBodyA: ball.physicsBody!,
                     bodyB: pointer.physicsBody!,
                     anchorA: ball.position,
                     anchorB: pointer.position)
                 joint.frequency = centerJoint.frequency * 2
                 joint.damping = centerJoint.damping / 2
-                physicsWorld.addJoint(joint)
+                physicsWorld.add(joint)
 
                 // Once the spring length is initialized, the pointer can be set to the finger-touch position again.
                 pointer.position = location
@@ -179,24 +179,23 @@ class RingScene: SKScene {
         }
     }
     
-
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 
-        self.enumerateChildNodesWithName("pointer") {
+        self.enumerateChildNodes(withName: "pointer") {
             node, stop in
             // do something with node or stop
             node.removeFromParent()
         }
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         for touch in touches{
-            self.enumerateChildNodesWithName("pointer") {
+            self.enumerateChildNodes(withName: "pointer") {
                 node, stop in
                 // do something with node or stop
-                node.position = touch.locationInNode(self)
+                node.position = touch.location(in: self)
             }
         }
     }
@@ -209,16 +208,16 @@ class RingScene: SKScene {
 
         
         // Send OSC message for all star nodes
-        self.enumerateChildNodesWithName("ball") {
+        self.enumerateChildNodes(withName: "ball") {
             node, stop in
             // do something with node or stop
             
             if let joint = node.physicsBody?.joints[0]{
                 let length = (joint.reactionForce.dx * joint.reactionForce.dx) + (joint.reactionForce.dy * joint.reactionForce.dy)
-                self.nerve.sendMessage("/joint/force \(length )")
+                self.nerve!.sendMessage("/joint/force \(length )")
             }
             
-            self.nerve.sendMessage("/ball/velocity \((node.physicsBody?.velocity.dx)!)")
+            self.nerve?.sendMessage("/ball/velocity \((node.physicsBody?.velocity.dx)!)")
             
             
             //TODO: send vall velocity and joint reaction force

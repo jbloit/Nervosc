@@ -29,29 +29,30 @@ class RingInspector: UIView {
         
         let sliderHeight = CGFloat(50)
         
-        self.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.1)
+        self.backgroundColor = UIColor.white.withAlphaComponent(0.1)
         freqSlider.frame = CGRectMake(0, sliderHeight * 0, bounds.size.width, sliderHeight)
-        freqSlider.addTarget(self, action: "onFreqSlider:", forControlEvents: .ValueChanged)
+        freqSlider.addTarget(self, action: "onFreqSlider:", for: .valueChanged)
+
         self.addSubview(freqSlider)
         
         dampSlider.frame = CGRectMake(0, sliderHeight, bounds.size.width, sliderHeight)
-        dampSlider.addTarget(self, action: "onDampSlider:", forControlEvents: .ValueChanged)
+        dampSlider.addTarget(self, action: "onDampSlider:", for: .valueChanged)
         self.addSubview(dampSlider)
         
         ballMassSlider.frame = CGRectMake(0, sliderHeight*2, bounds.size.width, sliderHeight)
-        ballMassSlider.addTarget(self, action: "onBallMassSlider:", forControlEvents: .ValueChanged)
+        ballMassSlider.addTarget(self, action: "onBallMassSlider:", for: .valueChanged)
         self.addSubview(ballMassSlider)
         
         ballDensitySlider.frame = CGRectMake(0, sliderHeight*3, bounds.size.width, sliderHeight)
-        ballDensitySlider.addTarget(self, action: "onBallDensitySlider:", forControlEvents: .ValueChanged)
+        ballDensitySlider.addTarget(self, action: "onBallDensitySlider:", for: .valueChanged)
         self.addSubview(ballDensitySlider)
         
         ballFrictionSlider.frame = CGRectMake(0, sliderHeight*4, bounds.size.width, sliderHeight)
-        ballFrictionSlider.addTarget(self, action: "onBallFrictionSlider:", forControlEvents: .ValueChanged)
+        ballFrictionSlider.addTarget(self, action: "onBallFrictionSlider:", for: .valueChanged)
         self.addSubview(ballFrictionSlider)
         
         ballRestitutionSlider.frame = CGRectMake(0, sliderHeight*5, bounds.size.width, sliderHeight)
-        ballRestitutionSlider.addTarget(self, action: "onballRestitutionSlider:", forControlEvents: .ValueChanged)
+        ballRestitutionSlider.addTarget(self, action: "onballRestitutionSlider:", for: .valueChanged)
         self.addSubview(ballRestitutionSlider)
         
     }

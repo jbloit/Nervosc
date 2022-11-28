@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A10A2F21E28963A74F0E957 /* libPods-NervoscDaemon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACFC9D6791AA9410E747969 /* libPods-NervoscDaemon.a */; };
 		6D02A75E1C883245003E337B /* RingInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02A75D1C883245003E337B /* RingInspector.swift */; };
 		6D1718E81C7FA42100C1E2E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1718E71C7FA42100C1E2E2 /* main.m */; };
 		6D1718EA1C7FA42100C1E2E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D1718E91C7FA42100C1E2E2 /* Assets.xcassets */; };
@@ -20,13 +21,14 @@
 		6DFE58281C80CD9500005D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DFE58271C80CD9500005D35 /* Assets.xcassets */; };
 		6DFE582B1C80CD9500005D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DFE58291C80CD9500005D35 /* LaunchScreen.storyboard */; };
 		6DFE58321C80CE2800005D35 /* Nerve.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE58311C80CE2800005D35 /* Nerve.m */; };
-		9FCCB1951FBE8506252C3065 /* libPods-Nervosc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B55A16A198BBD90F5538EFAB /* libPods-Nervosc.a */; };
-		DF6B828F2C48E625A459B9B2 /* libPods-NervoscDaemon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0335DA4C21AB0CBD59BE2E89 /* libPods-NervoscDaemon.a */; };
+		78C6F33579D150E924D93719 /* libPods-Nervosc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBC5B4E7257063CC1EB1E40 /* libPods-Nervosc.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0335DA4C21AB0CBD59BE2E89 /* libPods-NervoscDaemon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NervoscDaemon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13A6DC662A45C440BB616425 /* Pods-Nervosc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nervosc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nervosc/Pods-Nervosc.debug.xcconfig"; sourceTree = "<group>"; };
+		12E789B9510270F0E7334BBA /* Pods-Nervosc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nervosc.debug.xcconfig"; path = "Target Support Files/Pods-Nervosc/Pods-Nervosc.debug.xcconfig"; sourceTree = "<group>"; };
+		3BBC5B4E7257063CC1EB1E40 /* libPods-Nervosc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nervosc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E763D524B1077708B7E31A2 /* Pods-Nervosc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nervosc.release.xcconfig"; path = "Target Support Files/Pods-Nervosc/Pods-Nervosc.release.xcconfig"; sourceTree = "<group>"; };
+		58B2475527363DDFEAD1B3EF /* Pods-NervoscDaemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NervoscDaemon.release.xcconfig"; path = "Target Support Files/Pods-NervoscDaemon/Pods-NervoscDaemon.release.xcconfig"; sourceTree = "<group>"; };
 		6D02A75D1C883245003E337B /* RingInspector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingInspector.swift; sourceTree = "<group>"; };
 		6D1718E01C7FA42100C1E2E2 /* NervoscDaemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NervoscDaemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D1718E71C7FA42100C1E2E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -50,10 +52,8 @@
 		6DFE58301C80CE2800005D35 /* Nervosc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nervosc-Bridging-Header.h"; sourceTree = "<group>"; };
 		6DFE58311C80CE2800005D35 /* Nerve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nerve.m; sourceTree = "<group>"; };
 		6DFE58331C80CE4400005D35 /* Nerve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nerve.h; sourceTree = "<group>"; };
-		88BBE80FE87470BCC38B9606 /* Pods-Nervosc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nervosc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nervosc/Pods-Nervosc.release.xcconfig"; sourceTree = "<group>"; };
-		B55A16A198BBD90F5538EFAB /* libPods-Nervosc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nervosc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCE80761E283A9DB848DB964 /* Pods-NervoscDaemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NervoscDaemon.release.xcconfig"; path = "Pods/Target Support Files/Pods-NervoscDaemon/Pods-NervoscDaemon.release.xcconfig"; sourceTree = "<group>"; };
-		DCBFC46DA2B9A3567D1EFA8B /* Pods-NervoscDaemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NervoscDaemon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NervoscDaemon/Pods-NervoscDaemon.debug.xcconfig"; sourceTree = "<group>"; };
+		9AA42D780A3A980B186C451E /* Pods-NervoscDaemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NervoscDaemon.debug.xcconfig"; path = "Target Support Files/Pods-NervoscDaemon/Pods-NervoscDaemon.debug.xcconfig"; sourceTree = "<group>"; };
+		9ACFC9D6791AA9410E747969 /* libPods-NervoscDaemon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NervoscDaemon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF6B828F2C48E625A459B9B2 /* libPods-NervoscDaemon.a in Frameworks */,
+				1A10A2F21E28963A74F0E957 /* libPods-NervoscDaemon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,18 +69,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FCCB1951FBE8506252C3065 /* libPods-Nervosc.a in Frameworks */,
+				78C6F33579D150E924D93719 /* libPods-Nervosc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10BAAECCF6BCE798F719CD41 /* Frameworks */ = {
+		2D0D9C714FF5487441E301EB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0335DA4C21AB0CBD59BE2E89 /* libPods-NervoscDaemon.a */,
-				B55A16A198BBD90F5538EFAB /* libPods-Nervosc.a */,
+				12E789B9510270F0E7334BBA /* Pods-Nervosc.debug.xcconfig */,
+				4E763D524B1077708B7E31A2 /* Pods-Nervosc.release.xcconfig */,
+				9AA42D780A3A980B186C451E /* Pods-NervoscDaemon.debug.xcconfig */,
+				58B2475527363DDFEAD1B3EF /* Pods-NervoscDaemon.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		540CB3FD08E389E091BF38F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BBC5B4E7257063CC1EB1E40 /* libPods-Nervosc.a */,
+				9ACFC9D6791AA9410E747969 /* libPods-NervoscDaemon.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,8 +102,8 @@
 				6D1718E21C7FA42100C1E2E2 /* NervoscDaemon */,
 				6DFE581B1C80CD9500005D35 /* Nervosc */,
 				6D1718E11C7FA42100C1E2E2 /* Products */,
-				AC7FD211A89B0C4817645221 /* Pods */,
-				10BAAECCF6BCE798F719CD41 /* Frameworks */,
+				2D0D9C714FF5487441E301EB /* Pods */,
+				540CB3FD08E389E091BF38F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,17 +159,6 @@
 			path = Nervosc;
 			sourceTree = "<group>";
 		};
-		AC7FD211A89B0C4817645221 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DCBFC46DA2B9A3567D1EFA8B /* Pods-NervoscDaemon.debug.xcconfig */,
-				CCE80761E283A9DB848DB964 /* Pods-NervoscDaemon.release.xcconfig */,
-				13A6DC662A45C440BB616425 /* Pods-Nervosc.debug.xcconfig */,
-				88BBE80FE87470BCC38B9606 /* Pods-Nervosc.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,12 +166,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D1718F11C7FA42100C1E2E2 /* Build configuration list for PBXNativeTarget "NervoscDaemon" */;
 			buildPhases = (
-				E5C236947F8A9BDF31B23C74 /* Check Pods Manifest.lock */,
+				2FC85BA2B207D5D9A9A39A6A /* [CP] Check Pods Manifest.lock */,
 				6D1718DC1C7FA42100C1E2E2 /* Sources */,
 				6D1718DD1C7FA42100C1E2E2 /* Frameworks */,
 				6D1718DE1C7FA42100C1E2E2 /* Resources */,
-				5B4D29ED87E0E4E9D49D3C4C /* Embed Pods Frameworks */,
-				9A2DD7543E027D6BCCCC87BB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,12 +184,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DFE582F1C80CD9500005D35 /* Build configuration list for PBXNativeTarget "Nervosc" */;
 			buildPhases = (
-				16CFEDE5F590051807389947 /* Check Pods Manifest.lock */,
+				BEC6FA01C9830767E986F0D5 /* [CP] Check Pods Manifest.lock */,
 				6DFE58161C80CD9500005D35 /* Sources */,
 				6DFE58171C80CD9500005D35 /* Frameworks */,
 				6DFE58181C80CD9500005D35 /* Resources */,
-				0DA0126DFE5658494B3BDB68 /* Embed Pods Frameworks */,
-				8E51B00C59713AF1CF64A599 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +213,7 @@
 					};
 					6DFE58191C80CD9500005D35 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 854VVF729E;
 					};
 				};
 			};
@@ -225,6 +222,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -263,94 +261,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DA0126DFE5658494B3BDB68 /* Embed Pods Frameworks */ = {
+		2FC85BA2B207D5D9A9A39A6A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NervoscDaemon-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nervosc/Pods-Nervosc-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		16CFEDE5F590051807389947 /* Check Pods Manifest.lock */ = {
+		BEC6FA01C9830767E986F0D5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nervosc-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5B4D29ED87E0E4E9D49D3C4C /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NervoscDaemon/Pods-NervoscDaemon-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8E51B00C59713AF1CF64A599 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nervosc/Pods-Nervosc-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A2DD7543E027D6BCCCC87BB /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NervoscDaemon/Pods-NervoscDaemon-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E5C236947F8A9BDF31B23C74 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -480,7 +432,7 @@
 		};
 		6D1718F21C7FA42100C1E2E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCBFC46DA2B9A3567D1EFA8B /* Pods-NervoscDaemon.debug.xcconfig */;
+			baseConfigurationReference = 9AA42D780A3A980B186C451E /* Pods-NervoscDaemon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -495,7 +447,7 @@
 		};
 		6D1718F31C7FA42100C1E2E2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCE80761E283A9DB848DB964 /* Pods-NervoscDaemon.release.xcconfig */;
+			baseConfigurationReference = 58B2475527363DDFEAD1B3EF /* Pods-NervoscDaemon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -510,40 +462,44 @@
 		};
 		6DFE582D1C80CD9500005D35 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13A6DC662A45C440BB616425 /* Pods-Nervosc.debug.xcconfig */;
+			baseConfigurationReference = 12E789B9510270F0E7334BBA /* Pods-Nervosc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_PREFIX_HEADER = /Users/bloit/Downloads/Nervosc/Nervosc/PrefixHeader.pch;
+				DEVELOPMENT_TEAM = 854VVF729E;
+				GCC_PREFIX_HEADER = /Users/julien/repos/testApps/Nervosc/Nervosc/PrefixHeader.pch;
 				INFOPLIST_FILE = Nervosc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbloit.Nervosc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Nervosc/Nervosc-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		6DFE582E1C80CD9500005D35 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88BBE80FE87470BCC38B9606 /* Pods-Nervosc.release.xcconfig */;
+			baseConfigurationReference = 4E763D524B1077708B7E31A2 /* Pods-Nervosc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREFIX_HEADER = /Users/bloit/Downloads/Nervosc/Nervosc/PrefixHeader.pch;
+				DEVELOPMENT_TEAM = 854VVF729E;
+				GCC_PREFIX_HEADER = /Users/julien/repos/testApps/Nervosc/Nervosc/PrefixHeader.pch;
 				INFOPLIST_FILE = Nervosc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbloit.Nervosc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Nervosc/Nervosc-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
